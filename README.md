@@ -1,89 +1,98 @@
-CLI File Explorer
-A lightweight, keyboard-driven file explorer for the Windows command line interface. Navigate through your filesystem, preview files, and launch applications using just your keyboard.
-![CLI File Explorer Screenshot]
-<!-- Add a screenshot of your application here -->
-Features
+CLI File Explorer 🗂️
+A minimalist, keyboard-driven file explorer for the Windows command line. Navigate your filesystem with elegance and speed.
+✨ Features
+Core Functionality
 
-Keyboard Navigation: Move through directories and files using arrow keys
-Split-Panel View: File tree on the left, file preview on the right
-Color-Coded Files: Different colors for various file types:
+⌨️ Keyboard-Centric Navigation
 
-Yellow: Directories
-Red: PDF files
-Cyan: Image files (.jpg, .png, etc.)
-Green: Text files
-Magenta: Office documents
-White: Other files
+Seamless directory traversal with arrow keys
+Quick file access and preview capabilities
 
 
-File Preview: Instant preview for text files and file information for other formats
-Adjustable Panel Size: Customize the split view ratio using [ and ] keys
-System Integration: Launch files with their default applications
 
-Installation
+Visual Design
 
-Install dependencies:
+🎨 Color-Coded File Types
+Copy📂 Directories     │ Yellow
+📄 PDFs           │ Red
+🖼️ Images         │ Cyan
+📝 Text Files     │ Green
+📊 Office Docs    │ Magenta
 
+
+Interface
+
+📺 Dual-Panel Layout
+
+File tree navigation on the left
+Instant file preview on the right
+Adjustable panel ratio with [ and ] keys
+
+
+
+System Integration
+
+🚀 Smart File Handling
+
+Launches files with system defaults
+Instant text file preview
+Detailed info for binary files
+
+
+
+🛠️ Installation
+Prerequisites
 bashCopypip install pyinstaller windows-curses pillow
+Quick Setup
 
-Clone the repository:
-
+Get the Code
 bashCopygit clone https://github.com/yourusername/cli-file-explorer.git
 cd cli-file-explorer
 
-Build the executable:
-
+Build
 bashCopypyinstaller --onefile --name cli-file-explorer cli_explorer.py
 
-Add to system PATH (Run PowerShell as Administrator):
-
+System Integration (PowerShell Admin)
 powershellCopy$folder = "C:\Tools"
 New-Item -ItemType Directory -Force -Path $folder
 Copy-Item ".\dist\cli-file-explorer.exe" -Destination $folder
 $oldPath = [Environment]::GetEnvironmentVariable('Path', 'Machine')
 $newPath = $oldPath + ";$folder"
 [Environment]::SetEnvironmentVariable('Path', $newPath, 'Machine')
-Usage
-Launch from any terminal:
-bashCopycli-file-explorer
-Controls
 
-↑/↓: Navigate through files and directories
-Enter: Open file/directory
-Backspace: Go up one directory level
-[/]: Adjust panel split ratio
-Page Up/Down: Scroll file preview
-Q: Quit application
 
+🎮 Controls
+KeyAction↑ ↓Navigate itemsEnterOpen file/directoryBackspaceParent directory[ ]Adjust panel widthPage Up/DownScroll previewQExit
+💻 Development
+Setup Dev Environment
+bashCopygit clone https://github.com/yourusername/cli-file-explorer.git
+cd cli-file-explorer
+pip install -r requirements.txt
 Requirements
 
 Windows OS
 Python 3.x
+Required packages:
+
 windows-curses
 Pillow (PIL)
 
-Development
-To modify the source code:
 
-Clone the repository
-Install development dependencies:
 
-bashCopypip install -r requirements.txt
+🤝 Contributing
+We welcome contributions! Here's how:
 
-Make your changes to cli_explorer.py
-Rebuild using the provided build.bat
+Fork the Project
+Create your Feature Branch
+bashCopygit checkout -b feature/AmazingFeature
 
-Contributing
+Commit your Changes
+bashCopygit commit -m 'Add some AmazingFeature'
 
-Fork the repository
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
+Push to the Branch
+bashCopygit push origin feature/AmazingFeature
+
 Open a Pull Request
 
-License
+📄 License
 Distributed under the MIT License. See LICENSE for more information.
-Acknowledgments
-
-Inspired by terminal-based file managers like ranger and midnight commander
-Built with Python's curses library
