@@ -1,6 +1,7 @@
 CLI File Explorer 🗂️
 A minimalist, keyboard-driven file explorer for the Windows command line. Navigate your filesystem with elegance and speed.
 ✨ Features
+
 Core Functionality
 
 ⌨️ Keyboard-Centric Navigation
@@ -18,7 +19,6 @@ Copy📂 Directories     │ Yellow
 🖼️ Images         │ Cyan
 📝 Text Files     │ Green
 📊 Office Docs    │ Magenta
-
 
 Interface
 
@@ -96,3 +96,4 @@ Open a Pull Request
 
 📄 License
 Distributed under the MIT License. See LICENSE for more information.
+
